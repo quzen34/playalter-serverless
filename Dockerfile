@@ -2,7 +2,7 @@
 # Version: 2.0.0
 # Author: Fatih Ernalbant
 
-FROM runpod/pytorch:2.1.0-py3.10-cuda12.1.0-devel-ubuntu22.04
+FROM runpod/pytorch:2.2.0-py3.10-cuda12.1-devel-ubuntu22.04
 
 LABEL maintainer="Fatih Ernalbant"
 LABEL version="2.0.0"
