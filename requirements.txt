@@ -3,7 +3,7 @@
 
 # Core packages
 runpod==1.7.3
-numpy==1.24.3
+numpy>=1.24.4
 opencv-python==4.10.0.84
 opencv-python-headless==4.10.0.84
 Pillow==10.4.0
