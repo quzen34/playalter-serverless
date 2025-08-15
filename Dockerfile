@@ -1,12 +1,13 @@
-FROM nvidia/cuda:11.8.0-base-ubuntu22.04
+FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 
-WORKDIR /workspace
+WORKDIR /
 
-RUN apt-get update && apt-get install -y python3-pip git ffmpeg
+RUN apt-get update && apt-get install -y python3-pip git ffmpeg wget
+
+RUN pip install runpod==1.7.13
 
 COPY requirements.txt .
-RUN pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY handler.py .
 
